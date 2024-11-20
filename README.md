@@ -1,0 +1,44 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# SPCtools
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+SPCtools is an R package intended to make the most useful SPC methods
+easy to use in a workflow.
+
+It is highly opinionated based on my experiences. It will have functions
+to perform XmR and XbarR calculations, and convenience functions to set
+up plots based on baseline and ongoing monitoring. I also intend to
+extend these methods with ANOX and ANOM functions.
+
+## Installation
+
+You can install the development version of SPCtools from
+[GitHub](https://github.com/benjepson/SPCtools) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("benjepson/SPCtools")
+```
+
+## Example
+
+Examples coming soon!
+
+<!-- ```{r example} -->
+<!-- library(SPCtools) -->
+<!-- ## basic example code -->
+<!-- ``` -->
+<!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
+<!-- ```{r cars} -->
+<!-- summary(cars) -->
+<!-- ``` -->
+<!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. -->
+<!-- You can also embed plots, for example: -->
+<!-- ```{r pressure, echo = FALSE} -->
+<!-- plot(pressure) -->
+<!-- ``` -->
+<!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
