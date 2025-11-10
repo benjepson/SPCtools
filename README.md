@@ -14,6 +14,8 @@ to perform XmR and XbarR calculations, and convenience functions to set
 up plots based on baseline and ongoing monitoring. I also intend to
 extend these methods with ANOX and ANOM functions.
 
+For now, I use ggQC in R and it works, I am developing spctools in python and when that's further along will move back to R.
+
 ## Installation
 
 You can install the development version of SPCtools from
