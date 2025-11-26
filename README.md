@@ -54,6 +54,8 @@ I have several motivations in this project.
 systems analysis, we’ll see how far this goes. My objective for now is
 control charts and related methods.
 
+For now, I use ggQC in R and it works, I am developing spctools in python and when that's further along will move back to R.
+
 ## Installation
 
 You can install the development version of SPCtools from
