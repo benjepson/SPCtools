@@ -18,6 +18,10 @@ I also intend to extend these methods with ANOX and ANOM functions.
 These are similar to XmR and XbarR but for one time use, such as
 analyzing a fixed dataset rather than ongoing monitoring.
 
+SPC calculations are not very computationally intense, so I am
+emphasizing clarity of code over optimization. I want as few
+dependencies as possible too.
+
 I have several motivations in this project.
 
 - Correct limit calculation. I have used several R packages for SPC and
@@ -54,8 +58,6 @@ I have several motivations in this project.
 systems analysis, we’ll see how far this goes. My objective for now is
 control charts and related methods.
 
-For now, I use ggQC in R and it works, I am developing spctools in python and when that's further along will move back to R.
-
 ## Installation
 
 You can install the development version of SPCtools from
@@ -66,11 +68,13 @@ You can install the development version of SPCtools from
 devtools::install_github("benjepson/SPCtools")
 ```
 
-## Example
+## Examples and next steps
 
 Examples coming soon. Right now I’m building code and tests. If anyone
 wants to think of sadistic data scenarios for edge case testing, I would
-appreciate it!
+appreciate it! Someday I’d like to extend this package to be more EDA
+friendly, maybe pipe friendly. For now it’s focused on disciplined
+calculations.
 
 <!-- ```{r example} -->
 <!-- library(SPCtools) -->

@@ -24,6 +24,8 @@ It is highly opinionated based on my experiences. It will have functions to perf
 
 I also intend to extend these methods with ANOX and ANOM functions. These are similar to XmR and XbarR but for one time use, such as analyzing a fixed dataset rather than ongoing monitoring.
 
+SPC calculations are not very computationally intense, so I am emphasizing clarity of code over optimization. I want as few dependencies as possible too.
+
 I have several motivations in this project.
 
   - Correct limit calculation. I have used several R packages for SPC and each one has on occasion output results that weren't *quite* accurate. This package will (eventually...) include enough tests to ensure it will output correct results in any conceivable scenario.
@@ -49,9 +51,9 @@ devtools::install_github("benjepson/SPCtools")
 
 
 
-## Example
+## Examples and next steps
 
-Examples coming soon. Right now I'm building code and tests. If anyone wants to think of sadistic data scenarios for edge case testing, I would appreciate it!
+Examples coming soon. Right now I'm building code and tests. If anyone wants to think of sadistic data scenarios for edge case testing, I would appreciate it! Someday I'd like to extend this package to be more EDA friendly, maybe pipe friendly. For now it's focused on disciplined calculations.
 
 <!-- ```{r example} -->
 <!-- library(SPCtools) -->
