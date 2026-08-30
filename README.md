@@ -1,92 +1,73 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# SPCtools
+## SPCtools
 
-<!-- badges: start -->
-<!-- badges: end -->
+SPCtools is an R package for clear, reproducible statistical process
+control (SPC) calculations. It provides opinionated, human‑readable
+functions for XmR, XbarR, ANOX, and ANOM analyses, designed for real
+operational use in regulated manufacturing and industrial statistics. It
+directly addresses gaps I have seen in existing commercial SPC software
+and workflows, such as rich metadata.
 
-SPCtools is an R package intended to make the most useful SPC methods
-easy to use in a workflow.
+The package emphasizes:
 
-It is highly opinionated based on my experiences. It will have functions
-to perform XmR (including rare events) and XbarR calculations, and
-output an object that is useful for documenting how the limits were set,
-and for ongoing monitoring.
+- **Correct calculations** - SPCtools includes tests and edge‑case
+  handling to ensure accurate limits and diagnostics across a wide range
+  of data scenarios.
+- **Reproducible workflows** - Functions return structured objects
+  containing metadata about how limits were calculated, what baseline
+  data was used, and why. This supports documentation, auditability, and
+  long‑term monitoring.
+- **Clarity over complexity** - SPC calculations are not computationally
+  heavy, so SPCtools prioritizes readable code, minimal dependencies,
+  and transparent logic.
+- **Practical extensions** - In addition to standard control charts,
+  SPCtools will includes ANOX and ANOM methods for fixed datasets,
+  enabling intuitive diagnostics and exploratory analysis beyond ongoing
+  monitoring.
 
-I also intend to extend these methods with ANOX and ANOM functions.
-These are similar to XmR and XbarR but for one time use, such as
-analyzing a fixed dataset rather than ongoing monitoring.
+## Why SPCtools?
 
-SPC calculations are not very computationally intense, so I am
-emphasizing clarity of code over optimization. I want as few
-dependencies as possible too.
+I’ve used SPC methods for many years in manufacturing, R&D, and
+industrial analytics. Control charts are powerful tools for
+understanding variation, diagnosing problems, and guiding decisions.
+They are also essential prerequisites for many analyses - especially
+when data may show patterns over time, across batches, or during
+experiments.
 
-I have several motivations in this project.
+Existing R packages occasionally produce inconsistent results or lack
+the workflow structure needed for documentation and reproducibility.
+SPCtools aims to provide:
 
-- Correct limit calculation. I have used several R packages for SPC and
-  each one has on occasion output results that weren’t *quite* accurate.
-  This package will (eventually…) include enough tests to ensure it will
-  output correct results in any conceivable scenario.
-
-- Provide workflow tools - Control chart calculations are relatively
-  straightforward, but it’s important to document how they were
-  calculated (what data was used) and why, and what that baseline data
-  looked like. This way when someone wants to know where the limits they
-  are using for monitoring came from it will be well documented
-
-- Provide ANOX and ANOM calculations. And for ANOM, maybe some
-  convenience plotting functions.
-
-- SPC is so useful to me, I have used control charts and related tools
-  for many years now to solve problems and improve processes. I use
-  control charts to explore data, and perform intuitive analyses. Often
-  a good plot will be enough to spark inspiration and solve real
-  problems. Along with exploration, I also very frequently use control
-  charts as a prerequisite to further analysis. For example if a
-  variable shows patterns over time (during the experiment, lab analysis
-  order, etc) it may not be appropriate to aggregate the data for
-  testing. Many times I have found more useful results analyzing
-  experimental data with control charts than other methods. Standard
-  control charts are great but having ANOX and ANOM available will be
-  even better as they are intended for fixed datasets rather than
-  ongoing monitoring.
-
-## What else?
-
-“SPC” isn’t just control charts, I might add utilities for measurement
-systems analysis, we’ll see how far this goes. My objective for now is
-control charts and related methods.
+- disciplined, correct calculations  
+- metadata‑rich outputs  
+- opinionated defaults that reflect real‑world usage  
+- extensions for ANOX and ANOM  
+- a foundation for future SPC‑related utilities
 
 ## Installation
 
-You can install the development version of SPCtools from
-[GitHub](https://github.com/benjepson/SPCtools) with:
+You can install the development version of SPCtools from GitHub:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("benjepson/SPCtools")
+# devtools::install_github("benjepson/SPCtools")
 ```
 
-## Examples and next steps
+## Examples
 
-Examples coming soon. Right now I’m building code and tests. If anyone
-wants to think of sadistic data scenarios for edge case testing, I would
-appreciate it! Someday I’d like to extend this package to be more EDA
-friendly, maybe pipe friendly. For now it’s focused on disciplined
-calculations.
+Examples and vignettes are in development as the core functions and
+tests are completed. A pkgdown documentation site will be available
+soon.
 
-<!-- ```{r example} -->
-<!-- library(SPCtools) -->
-<!-- ## basic example code -->
-<!-- ``` -->
-<!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
-<!-- ```{r cars} -->
-<!-- summary(cars) -->
-<!-- ``` -->
-<!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. -->
-<!-- You can also embed plots, for example: -->
-<!-- ```{r pressure, echo = FALSE} -->
-<!-- plot(pressure) -->
-<!-- ``` -->
-<!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
+## Roadmap
+
+- XmR and XbarR calculations with metadata
+- XmR is what I find most useful, so it is the first priority
+- Rare‑events XmR support
+- ANOX and ANOM functions (analogues of XmR and XbarR for one time
+  analysis vs. ongoing monitoring)
+- Workflow helpers for documentation and reproducibility
+- Comprehensive test suite for edge‑case scenarios
+- pkgdown site with examples and guidance
